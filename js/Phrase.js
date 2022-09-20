@@ -14,12 +14,12 @@ class Phrase {
      */
     addPhraseToDisplay() {
         const letter = this.phrase.split("");
-        letter.forEach((letter) => {
-            if (letter === " ") {
+        for (let i = 0; i < letter.length; i++) {
+            if (letter[i] === " ") {
                 firstPhrase.innerHTML += '<li class="space"> </li>';
             } else {
-                firstPhrase.innerHTML += `<li class="hide letter ${splitPhrase[i]}">${splitPhrase[i]}</li>`;
+                firstPhrase.innerHTML += `<li class="hide letter ${letter[i]}">${letter[i]}</li>`;
             }
-        });
+        }
     }
 }
